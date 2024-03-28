@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class Abstr_Json(ABC):
+class AbstrJson(ABC):
     @abstractmethod
     def write_file(self, vacansy):
         """Создание json файла с найдеными вакансиями"""

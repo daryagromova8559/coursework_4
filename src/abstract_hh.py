@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class Abstr_HH(ABC):
+class AbstractHH(ABC):
 
     @abstractmethod
     def get_url(self):
