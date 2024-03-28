@@ -11,7 +11,7 @@ class RequestHH(AbstractHH):
     def __init__(self, name: str):
         self.name = name
         self.status = 0  # Статус requests
-        self.all_vacansy = self.get_url()
+        self.all_vacancy = self.get_url()
 
     def get_url(self) -> str | Any:
         """Поиск по названию"""
@@ -30,8 +30,8 @@ class RequestHH(AbstractHH):
             return f"Вакансии не найдены"
         else:
             save = JsonWork()
-            save.write_file(self.all_vacansy)
-            return self.all_vacansy
+            save.write_file(self.all_vacancy)
+            return self.all_vacancy
 
     def status_api(self):
         response = requests.get(f'https://api.hh.ru/vacancies')  # отправка GET-запроса
@@ -39,4 +39,4 @@ class RequestHH(AbstractHH):
         return self.status
 
     def __len__(self):
-        return len(self.all_vacansy)
+        return len(self.all_vacancy)

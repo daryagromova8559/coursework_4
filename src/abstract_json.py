@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class AbstrJson(ABC):
     @abstractmethod
-    def write_file(self, vacansy):
+    def write_file(self, vacancy):
         """Создание json файла с найдеными вакансиями"""
         pass
 
