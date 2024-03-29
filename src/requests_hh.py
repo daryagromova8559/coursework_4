@@ -16,7 +16,7 @@ class RequestHH(AbstractHH):
     def get_url(self) -> str | Any:
         """Поиск по названию"""
         if isinstance(self.name, str):
-            keys_response = {'text': f'NAME:{self.name}', 'area': 113, 'per_page': 100, }
+            keys_response = {'text': f'NAME:{self.name}', 'area': 113, 'per_page': 10, }
             info = requests.get(f'https://api.hh.ru/vacancies', keys_response)
             return json.loads(info.text)['items']
 
